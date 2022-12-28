@@ -31,7 +31,7 @@ void admin()
 	if(c_root != NULL)
 		
 	co_root=NULL;
-	co_root=
+	co_root=registration_contestant(co_root);
 	if(co_root!=NULL);
         while(1)
 	{
