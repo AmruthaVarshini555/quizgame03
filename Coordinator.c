@@ -116,10 +116,10 @@ void Coordinator()
 				ch=int_ans_choice(1,2);
 				if(ch == 1)
 				{
-					Disply(QA_root[0]);
+					Display(QA_root[0]);
 				}
 				else
-					Disply(QA_root[1]);
+					Display(QA_root[1]);
 				break;
 			case 6:
 				exit_flag = 1;
@@ -206,7 +206,7 @@ question_ans  question_extraction_from_file(char *str , question_ans q_a_data)
 					}
 					else if(index <= 3)
 					{
-						q_a_data.ans_intiger[index++] = str_num  ;
+						q_a_data.ans_integer[index++] = str_num  ;
 						//printf("int value: %d and index value %d\n",q_a_data.ans_intiger[index++],index-1);
 					}
 					
@@ -264,7 +264,7 @@ question_ans *create_list_for_QA(question_ans *source ,question_ans QA_DATA )
 			for(int i = 0 ; i < 4 ; i++)
 			{
 				//printf("ans_int: %d\n",QA_DATA.ans_intiger[i]);
-				source->ans_intiger[i] = QA_DATA.ans_intiger[i];	
+				source->ans_integer[i] = QA_DATA.ans_integer[i];	
 			}	
 		}
 		source->ans_int = QA_DATA.ans_int;
@@ -321,7 +321,7 @@ void Display(question_ans *root)
 		else if(q->check_flag == 2)
 		{
 			for(int i = 0 ; i < 4 ; i++)
-				printf("%c) %d\n",65+i,q->ans_intiger[i]);
+				printf("%c) %d\n",65+i,q->ans_integer[i]);
 		}
 		if(q->ans_int == 1)
 			printf("ans:%c\n",'A');
@@ -522,7 +522,7 @@ int *lookup_question(question_ans *source,int id ,int *index)
 	 if(source ==  NULL)
 	 {
 		printf("list is empty\n") ;
-		return NULL ;
+		return NULL;
 	  }
 	question_ans *q = source ;
 	int i = 0 , j =0;
@@ -542,7 +542,7 @@ int *lookup_question(question_ans *source,int id ,int *index)
 			else if(q->check_flag == 2)
 			{
 				for(int i = 0 ; i < 4 ; i++)
-					printf("%c) %d\n",65+i,q->ans_intiger[i]);
+					printf("%c) %d\n",65+i,q->ans_integer[i]);
 			}
 			break;
 		}
