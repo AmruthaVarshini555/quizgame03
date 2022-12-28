@@ -53,7 +53,7 @@ typedef struct contestant
 	int first_score;
 	int second_score;
 	int check;
-	int check_2;/
+	int check_2;
 	struct contestant *next;
 }contestant;
 
@@ -83,7 +83,6 @@ coordinator *update_coordinator(char*,coordinator*);
 void adding_new_coordinator_to_file();
 coordinator *delete_coordinator(char*,coordinator*);
 void display_coordinator();
-void delete_contestant();
 contestant *delete_contestant(contestant * , char *);
 void view_contestant();
 
