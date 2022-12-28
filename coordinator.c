@@ -54,7 +54,7 @@ void Coordinator()
 			case NEW_QUIZ: 
 				printf("enter 1 for first round\n");
 				printf("enter 2 for second round\n");
-				ch=int_ans_choice(1,2);
+				scanf("%d",&ch);
 				if(ch == 1)
 				{
 					adding_question_to_file(quize_file);	
@@ -71,8 +71,7 @@ void Coordinator()
 			case UPDATE_QUIZ: 
 				printf("enter 1 for first round\n");
 				printf("enter 2 for second round\n");
-				//scanf("%d",&ch);
-				ch=int_ans_choice(1,2);
+				scanf("%d",&ch);
 				if(ch == 1)
 				{
 					printf("enter the question \n");
@@ -93,7 +92,7 @@ void Coordinator()
 			case DELETE_QUIZ: 
 				printf("enter 1 for first round\n");
 				printf("enter 2 for second round\n");
-				ch=int_ans_choice(1,2);
+				scanf("%d",&ch);
 				if(ch == 1)
 				{
 					printf("enter question -id\n");
@@ -112,8 +111,7 @@ void Coordinator()
 			case DISPLAY_QUIZ:
 				printf("enter 1 for first round\n");
 				printf("enter 2 for second round\n");
-				//scanf("%d",&ch);
-				ch=int_ans_choice(1,2);
+				scanf("%d",&ch);
 				if(ch == 1)
 				{
 					Display(QA_root[0]);
