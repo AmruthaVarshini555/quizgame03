@@ -227,21 +227,6 @@ question_ans  question_extraction_from_file(char *str , question_ans q_a_data)
 //Creating list for question and answers
 question_ans *create_list_for_QA(question_ans *source ,question_ans QA_DATA )
 {
-	/*printf("Q_n : %d\n",QA_DATA.q_num);
-	printf("question : %s\n",QA_DATA.question);
-	if(QA_DATA.check_flag == 1)
-	{
-		for(int i = 0 ; i < 4 ; i++)
-		printf("ans: %s\n",QA_DATA.ans_string[i]);
-	}
-	else if(QA_DATA.check_flag == 2)
-	{
-		for(int i = 0 ; i < 4 ; i++)
-		printf("ans_int: %d\n",QA_DATA.ans_intiger[i]);
-	}
-	printf("ans_str %s\n",QA_DATA.ans_str);
-	printf("ans_int : %d\n",QA_DATA.ans_int);
-	*/
 	if(source == NULL)
 	{
 		source  = (question_ans *)malloc(sizeof(question_ans));
@@ -303,7 +288,7 @@ question_ans *create_list_for_QA(question_ans *source ,question_ans QA_DATA )
 	}
 	return source;	
 }
-
+//To display the questions and answers for round 1 and round 2
 void Display(question_ans *root)
 {
 	question_ans *q = root;
