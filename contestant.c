@@ -2,7 +2,7 @@
 #include<stdio.h> 
 #include<stdlib.h>
 #include<string.h>
-#include<fcnt1.h>
+#include<fcntl.h>
 #include<errno.h>
 #include<time.h>
 #include"header.h"
@@ -40,8 +40,7 @@ contestant *Contestant()
 		printf("5) Rules\n");
 		printf("6) exit\n");
 		design();
-		//scanf("%d",&ch);
-		ch=int_ans_choice(1,6);
+		scanf("%d",&ch);
 		if(ch==-1){
 			break;
 			exit(EXIT_SUCCESS);
@@ -70,7 +69,7 @@ contestant *Contestant()
 					else
 						printf("Please enter correct password\n");
 				}
-				play_quiz(user_id , pswd ,co_root,QA_root[0] );
+				play_quiz(user_id , pswd ,co_root);
 				save_score_to_file(co_root);
 				break ;
 			case 3: 
@@ -184,7 +183,7 @@ contestant *user_login(char *user_id , char *pswd ,contestant *c_root )
 			if(strcmp(p->pswd ,pswd )== 0)
 			{
 				flag = 1;
-				printf("well come %s\n",p->user_name);
+				printf("welcome %s\n",p->user_name);
 				return p;
 			}
 		}
@@ -192,7 +191,7 @@ contestant *user_login(char *user_id , char *pswd ,contestant *c_root )
 	}
 	if(flag == 0)
 	{
-		printf("user name or passwors is not matching\n");
+		printf("user name or password is not matching\n");
 		return NULL;
 	}	
 }
