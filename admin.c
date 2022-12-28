@@ -38,11 +38,10 @@ void admin()
                 printf("3) Logout and exit\n");
                 printf("0) Exit\n");
                 design();
-                //scanf("%d",&ch);
-		ch=int_ans_choice(0,3);
+                scanf("%d",&ch);
                 switch(ch)
                 {
-                        case COORDINATOR: //Managing coordinator details
+                        case 1: //Managing coordinator details
                                 while(1)
                                 {
                                         design();
@@ -52,8 +51,7 @@ void admin()
                                         printf("4) Display Coordinator list\n");
                                         printf("5) Back to previous menu\n");
                                         design();
-                                        //scanf("%d",&ch);
-					ch=int_ans_choice(1,5);
+                                        scanf("%d",&ch);
                                         switch(ch)
                                         {
 						case CREATE:
@@ -104,7 +102,7 @@ void admin()
                                                 break;
                                 }
                                 break ;
-                        case CONTESTANT://Managing contestant details
+                        case 2://Managing contestant details
                                 while(1)
                                 {
                                         design();
@@ -112,8 +110,7 @@ void admin()
                                         printf("2) View contestant\n");
                                         printf("0) Back\n");
                                         design();
-                                        //scanf("%d",&ch);
-					ch=int_ans_choice(0,2);
+                                        scanf("%d",&ch);
                                         switch(ch)
                                         {
                                                 case 1: 
@@ -139,7 +136,7 @@ void admin()
                                 }
 				break ;
 
-                        case LOGOUT:
+                        case 3:
                                 exit_flag_3 = 1;
                                 break ;
                         case EXIT:
@@ -186,7 +183,7 @@ coordinator *create_list_for_cordinator(coordinator *source ,coordinator Data )
 //Creation of new coordinator
 coordinator *new_coordinator(coordinator *source)
 {
-        char *cordinator_file = "coordinator_info.txt";
+        char *cordinator_file = "coordinator_details.txt";
         char buffer[QUESTION_BUFFER_SIZE];
         coordinator c_data ;
         FILE *fptr = fopen(cordinator_file,"r");
@@ -418,7 +415,7 @@ int *lookup_contestant(contestant *source,char *str,int *index)
                 printf("list is empty\n") ;
                 return NULL ;
           }
-        char *str_1 = "contestant_login_history.txt";
+        char *str_1 = "history.txt";
         char *user_delete = "DELETE";
         FILE *fptr = fopen(str_1,"a");
         if(fptr = NULL)
