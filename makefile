@@ -12,8 +12,8 @@ menu.o: menu.c
 admin.o: admin.c
 	gcc -c header.h admin.c
 
-coordinator.o: Coordinator.c
-	gcc -c header.h Coordinator.c
+coordinator.o: coordinator.c
+	gcc -c header.h coordinator.c
 
 contestant.o: contestant.c
 	gcc -c header.h contestant.c
