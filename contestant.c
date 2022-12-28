@@ -328,7 +328,7 @@ contestant *play_quiz(char *user_id , char *pswd , contestant *c_root)
 			//second_round_of_quiz_game(user,2);
 			first_round_of_quiz_game(user,2);
 			design();	
-			printf("second round is %d\n",user->second_socre);
+			printf("second round is %d\n",user->second_score);
 		}	
 	}
 	else
@@ -367,7 +367,7 @@ contestant *continue_quize_game(char *user_id , char *pswd,contestant *c_root ,q
 			design();
 			printf("welcome to second round %s\n",user->user_name);
 			design();
-			first_round_of_game(user,2);
+			first_round_of_quiz_game(user,2);
 			printf("second round marks is %d\n",user->second_score);
 		}
 		else{
@@ -508,7 +508,7 @@ void save_score_to_file(contestant *p)
 	if(fptr == NULL)
 	{
 		printf("%s file opening error\n",str);
-		break;	
+		return;	
 	}
 	else
 	{
