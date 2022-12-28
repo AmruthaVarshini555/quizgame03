@@ -26,7 +26,7 @@ int main_menu()
                 printf("2) Coordinator\n");
                 printf("3) Contestant\n");
                 printf("0) Exit\n");
-                ch=int_ans_choice(0,3);
+                scanf("%d",&ch);
 	 	switch(ch)
                 {
                         case ADMIN:
