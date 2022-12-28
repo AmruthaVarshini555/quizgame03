@@ -1,4 +1,1 @@
-swamy,sswamy,3,0
-swamy,sswamy,3,0
-swamy,sswamy,3,3
-swamy,sswamy,3,3
+jyothi,candy,4
