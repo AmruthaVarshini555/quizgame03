@@ -160,11 +160,7 @@ contestant *registration_contestant(contestant *source)
 			}
 			else 
 			{
-				c_data = data_extraction_from_contestant_file(buffer ,  c_data);
-				printf("user name %s\n",c_data.user_name);
-				printf("user id %s\n",c_data.user_id);
-				printf("Email-id %s\n",c_data.email_id);
-				printf("Password is %s\n",c_data.pswd);
+				c_data = data_extraction_from_contestant_file(buffer , c_data);
 			 	source = create_list_of_contestant(source , c_data);						
 			}
 		}
@@ -613,7 +609,6 @@ void rules()
 	printf("\n------------------ALL THE BEST-----------------");
 	printf("\nPress enter to continue..");
 	getchar();
-	exit(0);
 }
 
 
