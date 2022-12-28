@@ -29,7 +29,10 @@ void admin()
 	c_root = NULL;
 	c_root = new_coordinator(c_root);
 	if(c_root != NULL)
-		printf("Coordinator listed\n");	
+		
+	co_root=NULL;
+	co_root=
+	if(co_root!=NULL);
         while(1)
 	{
                 design();
@@ -126,7 +129,7 @@ void admin()
                                                         co_root = delete_contestant(co_root ,user_id);
                                                         save_contestant_data_into_file(co_root);
                                                         break ;
-                                                case 2: view_contestant();
+                                                case 2: view_contestant(contestant *co_root);
                                                         break;
                                                 case 0:
                                                         exit_flag_2 = 1;
@@ -501,7 +504,7 @@ contestant *delete_contestant(contestant *source , char *str)
         return source;
 }
 //To view the contestant
-void view_contestant()
+void view_contestant(contestant *co_root)
 {
         contestant *p = co_root;
         while(p!=NULL)
